@@ -33,6 +33,7 @@ class RegisterProvider extends ChangeNotifier {
   }
 
   Future<void> register(BuildContext context) async {
+    print("ENTER");
     CommonUtils.hideKeyBoard(context);
 
     if (!formKey.currentState!.validate()) return;
@@ -47,7 +48,7 @@ class RegisterProvider extends ChangeNotifier {
       ref.read(loginProvider).clearFields();
 
       CommonUtils.showToast('Registration successful!', AppColors.green);
-      Navigator.of(context).pop(); 
+      Navigator.of(context).pop();
     } on FirebaseAuthException catch (e) {
       String message;
       switch (e.code) {

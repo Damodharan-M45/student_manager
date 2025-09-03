@@ -57,12 +57,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   maxLength: 50,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   inputFormatter: [
-                    // Deny spaces
                     FilteringTextInputFormatter.deny(RegExp(r'\s')),
-                    // Deny emoji/unicode symbols
                     FilteringTextInputFormatter.deny(
                       RegExp(
-                        r'[^\w@.\-]', // allows letters, numbers, underscore, @, dot, dash
+                        r'[^\w@.\-]', 
                       ),
                     ),
                   ],
@@ -121,7 +119,6 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 TextButton(
                   onPressed: () {
                     CommonUtils.hideKeyBoard(context);
-                    // Clear fields
                     final loginProv = ref.read(loginProvider);
                     final regprov = ref.read(registerProvider);
 

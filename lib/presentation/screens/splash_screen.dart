@@ -51,7 +51,6 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
               ),
               SizedBox(height: 24.h),
 
-              // App Name
               Text(
                 'Student Manager',
                 style: TextStyle(
@@ -63,7 +62,6 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
 
               SizedBox(height: 16.h),
 
-              // Loading indicator
               const CircularProgressIndicator(color: AppColors.blue),
             ],
           ),

@@ -12,7 +12,7 @@ class CustomElevatedButton extends StatelessWidget {
   final double borderRadius;
   final double fontSize;
   final FontWeight fontWeight;
-  final Widget? icon; // optional leading icon
+  final Widget? icon; 
 
   const CustomElevatedButton({
     super.key,

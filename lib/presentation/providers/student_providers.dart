@@ -22,7 +22,6 @@ class StudentProvider extends ChangeNotifier {
     fetchStudents();
   }
 
-  /// Fetches students and updates local list
   Future<List<Student>> fetchStudents() async {
     _isLoading = true;
     _error = null;
@@ -53,7 +52,7 @@ class StudentProvider extends ChangeNotifier {
     }
 
     _isLoading = false;
-    return _students; // Return filtered list
+    return _students;
   }
 
   Future<void> refresh() async => fetchStudents();
@@ -64,7 +63,6 @@ class StudentProvider extends ChangeNotifier {
     try {
       await _addStudent(student);
 
-      // Print updated list
       for (var s in _students) {
         debugPrint('Student: ${s.name}, Email: ${s.email}, Phone: ${s.phone}');
       }

@@ -25,19 +25,16 @@ final addStudentProvider = ChangeNotifierProvider(
   (ref) => AddStudentProvider(ref),
 );
 
-// DataSource provider
 final studentLocalDataSourceProvider =
     Provider.autoDispose<StudentLocalDataSource>((ref) {
       return StudentLocalDataSourceImpl();
     });
 
-// Repository provider
 final studentRepositoryProvider = Provider.autoDispose((ref) {
   final ds = ref.watch(studentLocalDataSourceProvider);
   return StudentRepositoryImpl(localDataSource: ds);
 });
 
-// Usecases
 final getStudentsProviderusecase = Provider.autoDispose(
   (ref) => GetStudents(ref.watch(studentRepositoryProvider)),
 );
@@ -45,7 +42,6 @@ final addStudentProviderusecase = Provider.autoDispose(
   (ref) => AddStudent(ref.watch(studentRepositoryProvider)),
 );
 
-// ChangeNotifierProvider
 final studentProvider = ChangeNotifierProvider.autoDispose<StudentProvider>((
   ref,
 ) {

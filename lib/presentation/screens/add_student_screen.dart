@@ -22,7 +22,6 @@ class AddStudentScreen extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Back arrow
               Align(
                 alignment: Alignment.centerLeft,
                 child: IconButton(
@@ -37,7 +36,6 @@ class AddStudentScreen extends ConsumerWidget {
                   },
                 ),
               ),
-              // Title
               Center(
                 child: Text(
                   'Add Student',

@@ -54,7 +54,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Header
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -79,7 +78,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ),
                 SizedBox(height: 16.h),
 
-                // Student List
                 const Expanded(child: StudentListWidget()),
               ],
             ),

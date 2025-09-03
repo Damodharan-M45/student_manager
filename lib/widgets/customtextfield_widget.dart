@@ -17,8 +17,8 @@ class CustomTextField extends StatefulWidget {
   final TextInputType keyboardType;
   final List<TextInputFormatter>? inputFormatter;
   final int? maxLength;
-  final int? maxLines; // ✅ optional maxLines
-  final AutovalidateMode? autovalidateMode; // ✅ optional auto validation
+  final int? maxLines; 
+  final AutovalidateMode? autovalidateMode; 
 
   const CustomTextField({
     super.key,
@@ -86,7 +86,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             : widget.suffixIcon,
         filled: true,
         fillColor: widget.fillColor,
-        counterText: '', // hide default counter
+        counterText: '', 
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius),
           borderSide: BorderSide(color: widget.borderColor),

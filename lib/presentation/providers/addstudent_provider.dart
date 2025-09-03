@@ -61,7 +61,6 @@ class AddStudentProvider extends ChangeNotifier {
 
       await ref.read(homeProvider).refresh();
 
-      // Print updated student list
       final students = ref.read(homeProvider).students;
       for (var s in students) {
         log(

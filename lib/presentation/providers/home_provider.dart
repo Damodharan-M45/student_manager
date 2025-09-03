@@ -52,15 +52,11 @@ class HomeProvider extends ChangeNotifier {
     await loadStudents();
   }
 
-  /// Logout function
   Future<void> logout(BuildContext context) async {
-    // Clear login fields
     ref.read(loginProvider).clearFields();
 
-    // Sign out user
     await ref.read(authRepositoryProvider).signOut();
 
-    // Navigate to login screen
     if (context.mounted) {
       Navigator.of(context).pushReplacementNamed(AppRoutes.login);
     }

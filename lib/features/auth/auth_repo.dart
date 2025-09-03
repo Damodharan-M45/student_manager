@@ -19,7 +19,6 @@ class AuthRepository {
 
   Future<void> signOut() => _auth.signOut();
 
-  // ✅ Add this method
   Future<bool> isLoggedIn() async {
     return _auth.currentUser != null;
   }

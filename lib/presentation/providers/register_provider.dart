@@ -47,7 +47,7 @@ class RegisterProvider extends ChangeNotifier {
       ref.read(loginProvider).clearFields();
 
       CommonUtils.showToast('Registration successful!', AppColors.green);
-      Navigator.of(context).pop(); // Back to login
+      Navigator.of(context).pop(); 
     } on FirebaseAuthException catch (e) {
       String message;
       switch (e.code) {
